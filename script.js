@@ -22,15 +22,21 @@ document.getElementById("prev").addEventListener("click", prevImage);
 initialize();
 
 function closeImage(){
-    //@set hidden class on the container
-    //@reset img src to blank or placeholder
+    //select image that needs to be closed
+    //set attribute of the image / container to hidden
     console.log("you closed the image!");
 }
 
 function nextImage(){
+    //select image that is currently displayed
+    //select image that should be displayed next from an array
+    //replace the current displayed image with the next image from the array
     console.log("you want the next image!");
 }
 function prevImage(){
+    //select image that is currently displayed
+    //select image that was displayed previously from an array
+    //replace the current displayed image with the previous image from the array
     console.log("you want the previous image!");
 }
 
