@@ -85,13 +85,11 @@ h1{
     margin:2vh;
 }
 .buttons button{
-    background-color: white;
     margin:4px;
     padding-left:16px;
     padding-right:16px;
     border-radius:5px;
-    border-width:0.5px;
-    border-color:black;
+    background-color: white;
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;

@@ -34,13 +34,49 @@ function nextImage(){
     //select image that is currently displayed
     //select image that should be displayed next from an array
     //replace the current displayed image with the next image from the array
-    console.log("you want the next image!");
+    let id = document.getElementById('modal_content').lastChild.id;
+    let content = document.getElementById('modal_content');
+    let modalimg = document.createElement('img');
+    let imgid=0;
+
+    for (i=0; i< images.length; i++){
+        if (i == id){
+            if(i == 11){
+                imgid = 0;
+            }else{
+                imgid = i+1;
+            }
+        }
+    }
+    let image = document.getElementById(imgid);
+    modalimg.setAttribute('src', image.src);
+    modalimg.setAttribute('id', image.id);
+    content.lastChild.remove();
+    content.appendChild(modalimg);
 }
 function prevImage(){
     //select image that is currently displayed
     //select image that was displayed previously from an array
     //replace the current displayed image with the previous image from the array
-    console.log("you want the previous image!");
+    let id = document.getElementById('modal_content').lastChild.id;
+    let content = document.getElementById('modal_content');
+    let modalimg = document.createElement('img');
+    let imgid=0;
+
+    for (i=0; i< images.length; i++){
+        if (i == id){
+            if(i == 0){
+                imgid = 11;
+            }else{
+                imgid = i-1;
+            }
+        }
+    }
+    let image = document.getElementById(imgid);
+    modalimg.setAttribute('src', image.src);
+    modalimg.setAttribute('id', image.id);
+    content.lastChild.remove();
+    content.appendChild(modalimg);
 }
 
 function initialize(){
