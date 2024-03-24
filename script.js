@@ -47,13 +47,17 @@ function initialize(){
 
     for (i=0; i < images.length; i++){
         let img = document.createElement('img');
+        let div = document.createElement('div');
         //let link = document.createElement('a');
 
         img.setAttribute('src', images[i]);
         img.setAttribute('alt', 'gallery image');
         img.style.display = "block";
+        div.setAttribute('class', 'imgbox');
+        articles.setAttribute('class', 'gallery');
         //console.log(img);
-        articles.appendChild(img);
+        div.append(img);
+        articles.append(div);
     }
-    document.getElementById("img_gallery").appendChild(articles);
+    document.getElementById("img_gallery").append(articles);
 }

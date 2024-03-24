@@ -1,1 +1,60 @@
+.pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+.pt-serif-regular-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.pt-serif-bold-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+h1{
+    font-family:"PT Serif", serif;
+    font-weight:700;
+    font-style:normal;
+}
+.title{
+    text-align:center;
+    padding: 1vh;
+}
+.container{
+    display:grid;
+    column-gap: 0;
+    row-gap: 0;
+    width:100%;
+    grid-template-columns: repeat (4, 1fr);
+}
+.gallery{
+    display:flex;
+    width:100%;
+    height:auto;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.imgbox{
+    width:25%;
+    overflow:hidden;
+}
 
+.imgbox img{
+    width:300pt;
+    height:400pt;
+    object-fit:cover;
+    transition: transform .3s;
+}
+.imgbox img:hover{
+    transform:scale(1.7);
+}
