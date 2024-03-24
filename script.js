@@ -24,7 +24,8 @@ initialize();
 function closeImage(){
     //select image that needs to be closed
     //set attribute of the image / container to hidden
-    console.log("you closed the image!");
+    let modal = document.getElementById('modal');
+    modal.style.display = "none";
 }
 
 function nextImage(){
@@ -71,5 +72,18 @@ for(i=0; i< images.length; i++){
 
 
 function openModal(){
-    console.log(this.id);
+    //grab id of the clicked image, append selected image to the modal div
+    let id = this.id;
+    let modal = document.getElementById('modal');
+    let content = document.getElementById('modal_content');
+    let modalimg = document.createElement('img');
+
+    for (i=0; i< images.length; i++){
+        if (i == id){
+            console.log("found image" + i);
+            modalimg.setAttribute('src', images[i]);
+        }
+    }
+    content.appendChild(modalimg);
+    modal.style.display = "block";
 }
