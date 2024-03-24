@@ -69,18 +69,20 @@ h1{
     overflow:scroll;
 }
 .modal_context{
-    margin:10vh;
-    padding:5vh;
+    display:flex;
+    justify-content: center;
+    margin:0vh;
 }
 .modal_context img{
-    height:70vh;
+    height:80vh;
+    padding:5vh;
     width:auto;
 }
 .buttons{
     width:100%;
     display:flex;
     justify-content: space-around;
-    margin:5vh;
+    margin:2vh;
 }
 .buttons button{
     background-color: white;
