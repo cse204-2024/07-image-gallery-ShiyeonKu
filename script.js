@@ -52,12 +52,24 @@ function initialize(){
 
         img.setAttribute('src', images[i]);
         img.setAttribute('alt', 'gallery image');
+        img.setAttribute('id', i);
         img.style.display = "block";
         div.setAttribute('class', 'imgbox');
+        div.setAttribute('id', 'imagediv');
         articles.setAttribute('class', 'gallery');
         //console.log(img);
         div.append(img);
         articles.append(div);
     }
     document.getElementById("img_gallery").append(articles);
+}
+
+//when image is clicked, open up a modal 
+for(i=0; i< images.length; i++){
+    document.getElementById(i).addEventListener("click", openModal);
+}
+
+
+function openModal(){
+    console.log(this.id);
 }
