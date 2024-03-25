@@ -1,5 +1,5 @@
 # Starter HTML, CSS and Javascript
 
-This repository provides blank files for HTML, CSS, and Javascript.
+Shiyeon Monk
 
-Before submitting, replace the text in this README file with your name and a brief description of your work (just a sentence or two will do).
+This is a image gallery showcasing different images available on the website. User is able to click on individual image to view full screen, which is also where they can click through the array of images. Gallery should be responsive to the different screen sizes.
