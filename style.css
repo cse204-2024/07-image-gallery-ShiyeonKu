@@ -26,17 +26,26 @@ h1{
     font-weight:700;
     font-style:normal;
 }
+p{
+    font-family:"PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(67, 67, 67);
+}
 .title{
     text-align:center;
     padding: 1vh;
+    margin-left:5vw;
+    margin-right:5vw;
 }
 .container{
     display:grid;
     column-gap: 0;
     row-gap: 0;
     width:100%;
-    grid-template-columns: repeat (4, 1fr);
+    grid-template-columns: repeat (5, 1fr);
 }
+
 .gallery{
     display:flex;
     width:100%;
@@ -50,8 +59,8 @@ h1{
 }
 
 .imgbox img{
-    width:300pt;
-    height:400pt;
+    width:40vw;
+    height:60vh;
     object-fit:cover;
     transition: transform .3s;
 }
@@ -72,6 +81,7 @@ h1{
     display:flex;
     justify-content: center;
     margin:0vh;
+    overflow:scroll;
 }
 .modal_context img{
     height:80vh;
@@ -101,4 +111,40 @@ h1{
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: italic;
+}
+
+@media only screen and (max-width:1000px){
+    .container{
+        grid-template-columns: repeat (3, 1fr);
+    }
+    .gallery{
+        display:flex;
+        width:100%;
+        height:auto;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .gallery>*{
+        flex: 1 1 200px;
+    }
+}
+
+@media only screen and (max-width:615px){
+    .container{
+        grid-template-columns: repeat (2, 1fr);
+    }
+    .gallery{
+        display:flex;
+        width:100%;
+        height:auto;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .gallery>*{
+        flex: 1 1 250px;
+    }
+    .imgbox img{
+        width:50vw;
+        height:50vh;
+    }
 }

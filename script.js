@@ -103,7 +103,7 @@ function initialize(){
     document.getElementById("img_gallery").append(articles);
 }
 
-//when image is clicked, open up a modal 
+//when image is clicked, open up a modal
 for(i=0; i< images.length; i++){
     document.getElementById(i).addEventListener("click", openModal);
 }
