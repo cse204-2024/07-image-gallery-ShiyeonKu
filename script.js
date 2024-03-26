@@ -16,10 +16,38 @@ const images=[
     "images/tamas-tokos-ou8-_71Qigc-unsplash.jpg",
     "images/tetiana-kobzeva-ohy4BjZo118-unsplash.jpg",
 ]
-document.getElementById("close").addEventListener("click", closeImage);
-document.getElementById("next").addEventListener("click", nextImage);
-document.getElementById("prev").addEventListener("click", prevImage);
 initialize();
+
+for (i = 0; i < images.length; i++){
+    document.getElementById(i).addEventListener("click", openModal);
+}
+
+function initialize(){
+    //iterate through images
+    let articles = document.createElement('section');
+    articles.setAttribute('id', 'imglist');
+
+    for (i=0; i < images.length; i++){
+        let img = document.createElement('img');
+        let div = document.createElement('div');
+        //let link = document.createElement('a');
+
+        img.setAttribute('src', images[i]);
+        img.setAttribute('alt', 'gallery image');
+        img.setAttribute('id', i);
+        img.style.display = "block";
+        div.setAttribute('class', 'imgbox');
+        div.setAttribute('id', 'imagediv');
+        articles.setAttribute('class', 'gallery');
+        //console.log(img);
+        div.append(img);
+        articles.append(div);
+    }
+    document.getElementById("img_gallery").append(articles);
+    document.getElementById("close").addEventListener("click", closeImage);
+    document.getElementById("next").addEventListener("click", nextImage);
+    document.getElementById("prev").addEventListener("click", prevImage);
+}
 
 function closeImage(){
     //select image that needs to be closed
@@ -78,36 +106,6 @@ function prevImage(){
     content.lastChild.remove();
     content.appendChild(modalimg);
 }
-
-function initialize(){
-    //iterate through images
-    let articles = document.createElement('section');
-    articles.setAttribute('id', 'imglist');
-
-    for (i=0; i < images.length; i++){
-        let img = document.createElement('img');
-        let div = document.createElement('div');
-        //let link = document.createElement('a');
-
-        img.setAttribute('src', images[i]);
-        img.setAttribute('alt', 'gallery image');
-        img.setAttribute('id', i);
-        img.style.display = "block";
-        div.setAttribute('class', 'imgbox');
-        div.setAttribute('id', 'imagediv');
-        articles.setAttribute('class', 'gallery');
-        //console.log(img);
-        div.append(img);
-        articles.append(div);
-    }
-    document.getElementById("img_gallery").append(articles);
-}
-
-//when image is clicked, open up a modal
-for(i=0; i< images.length; i++){
-    document.getElementById(i).addEventListener("click", openModal);
-}
-
 
 function openModal(){
     //grab id of the clicked image, append selected image to the modal div
