@@ -32,20 +32,26 @@ p{
     font-style: normal;
     color:rgb(67, 67, 67);
 }
+body{
+    background-color:rgb(234, 234, 234);
+}
 .title{
     text-align:center;
-    padding: 1vh;
-    margin-left:5vw;
-    margin-right:5vw;
+    padding:1vh;
+    padding-left:5vw;
+    padding-right:5vw;
+    margin-bottom:2vh;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    background-color:rgb(255, 255, 255);
 }
 .container{
     display:grid;
     column-gap: 0;
     row-gap: 0;
     width:100%;
-    grid-template-columns: repeat (5, 1fr);
+    grid-template-columns: repeat (4, 1fr);
 }
-
 .gallery{
     display:flex;
     width:100%;
